@@ -1,0 +1,11 @@
+%h2 ログイン
+.col-md-10.form.p32
+  = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .form-inputs
+      = f.input :email, required: false, autofocus: true
+      = f.input :password, required: false
+    .form-inputs.ml32
+      = f.input :remember_me, as: :boolean, style: "padding-left: 32px;" if devise_mapping.rememberable?
+    .form-actions
+      = f.button :submit, "ログイン", class: "btn btn-primary"
+= render "devise/shared/links"

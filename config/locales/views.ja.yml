@@ -1,0 +1,15 @@
+ja:
+  # for kaminari
+  views:
+    pagination:
+      first: "&laquo;"
+      last: "&raquo;"
+      previous: "&lsaquo;"
+      next: "&rsaquo;"
+      truncate: "..."
+#  # for application view
+#    processing: "処理中.."
+#  # Mail Section
+#  user_mailer:
+#    message_notice:
+#      subject: "【example.com】%sさんからメッセージがあります"

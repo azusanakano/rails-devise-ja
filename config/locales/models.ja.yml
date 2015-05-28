@@ -1,0 +1,15 @@
+ja:
+  activemodel:
+    errors:
+#      <<: *errors
+  activerecord:
+    errors:
+#      <<: *errors
+    attributes:
+      user:
+        email: "メールアドレス"
+        password: "パスワード"
+        password_confirmation: "パスワード（再入力）"
+        remember_me: "次回から自動ログイン"
+        current_password: '現在のパスワード'
+        rule_confirmed: "利用規約に同意"

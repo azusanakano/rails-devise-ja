@@ -1,0 +1,10 @@
+%h2 登録確認メールの再送信
+.col-md-10.form.p32
+  = simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
+    = f.error_notification
+    = f.full_error :confirmation_token
+    .form-inputs
+      = f.input :email, required: true, autofocus: true
+    .form-actions
+      = f.button :submit, "送信", class: "btn btn-primary"
+= render "devise/shared/links"
