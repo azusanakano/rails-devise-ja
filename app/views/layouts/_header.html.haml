@@ -1,0 +1,20 @@
+.navbar.navbar-inverse.navbar-fluid-top
+  .navbar-inner
+    .container-fluid
+      %a.navbar-brand{ href: "/" }= S.app_name
+      .row.text-right.mt8
+        - if user_signed_in?
+          -# ログイン状態
+          .btn-group.text-left.mr32
+            %a.btn.btn-primary.dropdown-toggle{ "data-toggle" => "dropdown", href: "#" }
+              #{current_user.email} さん
+              %span.caret
+            %ul.dropdown-menu
+              %li= link_to "アカウント情報", edit_user_registration_path, tabindex: "-1"
+              %li.divider
+              %li= link_to "ログアウト", destroy_user_session_path, method: :delete, tabindex: "-1"
+        - else
+          -# ログアウト状態
+          .mt4
+            = link_to "ユーザ登録", new_registration_path(User.new), class: 'btn btn-default mr16'
+            = link_to "ログイン", new_user_session_path, class: 'btn btn-default mr16'

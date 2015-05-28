@@ -40,8 +40,9 @@
   
     = javascript_include_tag 'application', :'data-turbolinks-track' => true
 
-    %title= content_for?(:title) ? yield(:title) : "Rails Devise Japanese"
+    %title= content_for?(:title) ? yield(:title) : S.app_name
 %body
+  = render partial: "layouts/header"
   .container-fluid
     .col-md-12= render partial: "layouts/flash_message", flash: flash
     .col-md-12= yield

@@ -6,6 +6,6 @@
 #rake db:migrate
 #rails generate devise:views
 
-rails g bootstrap:install
-
+#rails g bootstrap:install
+rails g rails_config:install
 

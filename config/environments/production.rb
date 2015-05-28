@@ -79,6 +79,19 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { host: 'example.com' }
 
+  # SMTP Server setting (For devise)
+  config.action_mailer.default_url_options = { host: ENV['RAILS_SMTP_HOST'] }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: ENV['RAILS_SMTP_ADDRESS'],
+    port: 465,
+    authetication: :login,
+    user_name: ENV['RAILS_SMTP_USER'],
+    domain: ENV['RAILS_SMTP_DOMAIN'],
+    password: ENV['RAILS_SMTP_PASSWORD'],
+    ssl: true,
+    tls: true,
+    enable_starttls_auto: true,
+  }
 end
