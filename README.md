@@ -1,1 +1,1 @@
-# rails_devise_ja
+# Rails Devise Application (Japanese Edition)
