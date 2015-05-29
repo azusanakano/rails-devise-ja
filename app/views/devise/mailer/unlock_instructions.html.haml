@@ -1,0 +1,6 @@
+%p こんにちわ #{@resource.email} 様
+%p ログインに数回続けて失敗したため、あなたのアカウントはロックされました。
+%p 下記、リンクよりアカウントロックを解除してください。
+%p
+%p= link_to 'アカウントロック解除', unlock_url(@resource, unlock_token: @token)
+%p
