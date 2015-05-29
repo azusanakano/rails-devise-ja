@@ -14,6 +14,11 @@
  *= require_self
  */
 
+body {
+  font-family: "Meiryo UI", "ＭＳ Ｐゴシック", Arial, sans-serif;
+  font-size: 16px;
+}
+
 .p4 { padding: 4px; }
 .p8 { padding: 8px; }
 .p16 { padding: 16px; }

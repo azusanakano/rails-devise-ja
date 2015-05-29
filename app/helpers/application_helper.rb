@@ -17,16 +17,3 @@ module ApplicationHelper
   end
 end
 
-module I18n
-  def t(code, options = {})
-    begin
-      msg_code = code
-      human_attribute = eval(msg_code)
-      return super.translate(human_attribute, options)
-      #return human_attribute
-    rescue SyntaxError => ex
-      loggler.error ex.inspect
-      return ""
-    end
-  end
-end
