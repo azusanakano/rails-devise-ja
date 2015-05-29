@@ -1,5 +1,10 @@
 class RegistrationsController < Devise::RegistrationsController
   before_filter :destroy_user, only: [ :destroy ]
+  before_filter :create_user, only: [ :create ]
+
+  # ユーザ作成
+  def create_user
+  end
 
   # アカウント削除
   def destroy_user

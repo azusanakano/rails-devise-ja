@@ -12,7 +12,7 @@
     = link_to "登録確認メール再送信", new_confirmation_path(resource_name)
     %br/
   - if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks'
-    = link_to "ロック解除メール再送信", new_unlock_path(resource_name)
+    = link_to "ロック解除メール送信", new_unlock_path(resource_name)
     %br/
   - if devise_mapping.omniauthable?
     - resource_class.omniauth_providers.each do |provider|
